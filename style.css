@@ -22,7 +22,7 @@ body {
     margin-top: 20px;
 }
 .Happy_Birthday::after {
-    content: "Happy Birthday";
+    content: "Happy Birthday❤️";
     display: block;
 }
 .cake-anim {
