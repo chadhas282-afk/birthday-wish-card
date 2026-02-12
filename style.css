@@ -89,7 +89,7 @@ body {
     font-style: italic;
     font-size: 1rem;
 }
-/* .hidden {
+.hidden {
     opacity: 0;
     transform: scale(0.9) translateY(30px);
 }
@@ -100,7 +100,7 @@ body {
 }
 .fade-in {
     animation: popIn 1s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
-} */
+}
 @keyframes popIn {
     to { opacity: 1; transform: scale(1) translateY(0); }
 }
