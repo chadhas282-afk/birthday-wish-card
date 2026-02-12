@@ -2,19 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A Special Surprise ✨</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
-
 <body>
-    <div class="card">
-        <div class="cake-container">
-            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG90dncydmNya2FrdThzcDltN2w3dnA0N3JocGx2cGx6YjY2aTBjaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JwRt7bVfV1VSSLs1TK/giphy.gif" alt="Birthday Cake"
-                class="cake-anim">
-        </div>
 
-        <h1 class="Happy_Birthday"></h1>
+    <audio id="birthday-song" loop preload="auto">
+        <source src="/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="welcome-screen">
+        <div class="envelope-wrapper">
+            <div class="floating-heart">❤️</div>
+            <h2 class="tap-text">A little something for you...</h2>
+            <button class="open-btn" onclick="openCard()">Open Your Surprise</button>
+        </div>
     </div>
+
+    <div id="birthday-card" class="card hidden">
+        <div class="cake-container">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG90dncydmNya2FrdThzcDltN2w3dnA0N3JocGx2cGx6YjY2aTBjaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JwRt7bVfV1VSSLs1TK/giphy.gif" 
+                 alt="Birthday Cake" class="cake-anim">
+        </div>
+        <h1 class="Happy_Birthday"></h1>
+        <p class="wish-text">Wishing you a day as wonderful as you are! ✨</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

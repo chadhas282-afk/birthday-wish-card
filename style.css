@@ -1,40 +1,115 @@
 body {
-    background-color: pink;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff0f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.tap-text {
+    color: #ad1457;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+.envelope-wrapper {
+    text-align: center;
+}
+.floating-heart {
+    font-size: 60px;
+    animation: heartFloat 2s infinite ease-in-out;
+    margin-bottom: 10px;
+}
+.open-btn {
+    padding: 16px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #ff4081, #ec407a);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 64, 129, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.open-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(255, 64, 129, 0.5);
 }
 .card {
-    background-color: pink;
-    padding: 50px;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 30px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 5;
+}
+.cake-anim {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 20px;
 }
 .Happy_Birthday {
-    font-family: 'cursive', sans-serif;
+    font-family: 'Dancing Script', cursive;
     color: #c2185b;
-    font-size: 3.5em;
-    font-weight: 700;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-    margin-top: 20px;
+    font-size: 3rem;
+    margin: 20px 0 10px;
 }
 .Happy_Birthday::after {
-    content: "Happy Birthday❤️";
+    content: "Happy Birthday! ❤️";
     display: block;
 }
-.cake-anim {
-    width: 150px;
-    animation: fadeIn 2s ease-in-out;
+.wish-text {
+    color: #880e4f;
+    font-style: italic;
+    font-size: 1rem;
 }
-.cake-anim {
-    width: 250px;
-    height: auto;
-    border: 2px solid red;
+.hidden {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
 }
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.fade-out {
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+}
+.fade-in {
+    animation: popIn 1s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes popIn {
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes heartFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+@media (max-width: 480px) {
+    .Happy_Birthday { font-size: 2.2rem; }
+    .card { padding: 30px 15px; }
+    .cake-anim { max-width: 180px; }
 }
