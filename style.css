@@ -1,0 +1,40 @@
+body {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.card {
+    background-color: pink;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.Happy_Birthday {
+    font-family: 'cursive', sans-serif;
+    color: #c2185b;
+    font-size: 3.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+}
+.Happy_Birthday::after {
+    content: "Happy Birthday";
+    display: block;
+}
+.cake-anim {
+    width: 150px;
+    animation: fadeIn 2s ease-in-out;
+}
+.cake-anim {
+    width: 250px;
+    height: auto;
+    border: 2px solid red;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
